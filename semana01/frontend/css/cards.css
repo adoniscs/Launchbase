@@ -1,0 +1,38 @@
+:root {
+  --color-card: #7159c1;
+}
+
+.cards {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--color-card);
+  margin-bottom: 32px;
+}
+
+.card__image-container img {
+  width: 100%;
+}
+
+.card__content,
+.card__info {
+  padding: 24px;
+}
+
+.card__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card__price {
+  background-color: var(--color-card);
+  filter: brightness(90%);
+  padding: 5px 20px;
+  border-radius: 20px;
+  text-align: center;
+}
