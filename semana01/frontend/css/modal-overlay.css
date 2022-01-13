@@ -6,6 +6,7 @@
   top: 0;
   opacity: 0;
   visibility: hidden;
+  transition: .4s linear;
 }
 
 /* MODAL ACTIVE  */
@@ -29,13 +30,13 @@
   position: absolute;
   right: 10px;
   top: 10px;
-  background: rgba(0, 0, 0, .2);
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
-  transform: color .2s;
+  transform: color 0.2s;
 }
 
 .modal .close-modal:hover {
   color: #555;
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }

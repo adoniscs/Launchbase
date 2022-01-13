@@ -13,6 +13,7 @@
 .card {
   background: var(--color-card);
   margin-bottom: 32px;
+  cursor: pointer;
 }
 
 .card__image-container img {
