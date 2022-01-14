@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% block head %}
+      <title>Adonis Cipriano</title>
+    {% endblock %}
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="links">
+        <a href="/">Sobre</a>
+        <a href="/classes">Aulas</a>
+      </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+      <div class="links">
+        <a href="https://github.com/adoniscs" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/adoniscs/" target="_blank">Linkedin</a>
+      </div>
+    </footer>
+  </body>
+</html>
