@@ -21,10 +21,6 @@ server.get('/classes', (request, response) => {
   return response.render('classes')
 })
 
-server.get('/classes', (request, response) => {
-  return response.render('classes')
-})
-
 server.listen(PORT, () => {
   console.log('Server is running...')
 })
