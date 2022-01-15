@@ -1,4 +1,5 @@
 const express = require('express');
+const res = require('express/lib/response');
 const njk = require('nunjucks');
 const server = express();
 const PORT = 3333;
@@ -18,6 +19,10 @@ server.get('/', (request, response) => {
 
 server.get('/about', (request, response) => {
   return response.render('about');
+});
+
+server.use(function (request, response) {
+  response.status(404).render('not-found');
 });
 
 server.listen(PORT, () => {
