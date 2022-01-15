@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="/style.css"/>
+    {% block head %}
+      <title>Desafio Semana 01 - Launchbase</title>
+    {% endblock %}
+  </head>
+  <body>
+    <header class="link">
+      <img src="/logo-rocketseat.svg" alt="Logo Rocketseat"/>
+      <nav>
+        <a href="/">Conteúdos</a>
+        <a href="/about">Sobre</a>
+        <a href="https://discordapp.com/invite/gCRAFhc" target="_blank">Comunidade</a>
+        <a href="mailto:oi@rocketseat.com.br." target="_blank">Email</a>
+        <a href="tel:+5547992078767" target="_blank">Telefone</a>
+      </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <footer class="link">
+      <a href="#">Github</a>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+    </footer>
+  </body>
+</html>
