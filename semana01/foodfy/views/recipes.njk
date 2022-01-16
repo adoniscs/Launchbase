@@ -5,129 +5,42 @@
     .card {
       cursor: pointer;
     }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
   </style>
 {% endblock %}
 {% block content %}
   <main>
     <div class="cards">
-      <div class="card" id="burger.png">
-        <div class="card__img">
-          <img src="/burger.png" alt="Imagem de um hamburguer"/>
+      {% for item in ìtems2 %}
+        <div class="card" id="{{ item.id }}">
+          <div class="card__img">
+            <img src="{{ item.image }}" alt="Imagem de {{ item.description }}"/>
+          </div>
+          <div class="card__description">
+            <p>{{ item.description }}</p>
+            <span>
+              {{ item.author }}
+            </span>
+          </div>
         </div>
-        <div class="card__description">
-          <p>Triplo bacon burguer</p>
-          <span>por Jorge Relato</span>
-        </div>
-      </div>
-      <div class="card" id="pizza.png">
-        <div class="card__img">
-          <img src="/pizza.png" alt="Imagem de uma pizza"/>
-        </div>
-        <div class="card__description">
-          <p>Pizza 4 estações</p>
-          <span>por Fabiana Melo</span>
-        </div>
-      </div>
-      <div class="card" id="espaguete.png">
-        <div class="card__img">
-          <img src="/espaguete.png" alt="Imagem de um prato com espaguete"/>
-        </div>
-        <div class="card__description">
-          <p>Espaguete ao alho</p>
-          <span>por Júlia Kinoto</span>
-        </div>
-      </div>
-      <div class="card" id="lasanha.png">
-        <div class="card__img">
-          <img src="/lasanha.png" alt="Imagem de uma lasanha mac n'cheese"/>
-        </div>
-        <div class="card__description">
-          <p>Lasanha mac n'cheese</p>
-          <span>por Juliano Vieira</span>
-        </div>
-      </div>
-      <div class="card" id="doce.png">
-        <div class="card__img">
-          <img src="/doce.png" alt="Imagem de um doce pãozinho pão do céu"/>
-        </div>
-        <div class="card__description">
-          <p>Docinhos pão-do-céu</p>
-          <span>por Ricardo Golvea</span>
-        </div>
-      </div>
-      <div class="card" id="asinhas.png">
-        <div class="card__img">
-          <img src="/asinhas.png" alt="Imagem de várias asinhas de frango assado"/>
-        </div>
-        <div class="card__description">
-          <p>Asinhas de frango barbecue</p>
-          <span>por Vania Steroski</span>
-        </div>
-      </div>
-      <div class="card" id="burger.png">
-        <div class="card__img">
-          <img src="/burger.png" alt="Imagem de um hamburguer"/>
-        </div>
-        <div class="card__description">
-          <p>Triplo bacon burguer</p>
-          <span>por Jorge Relato</span>
-        </div>
-      </div>
-      <div class="card" id="pizza.png">
-        <div class="card__img">
-          <img src="/pizza.png" alt="Imagem de uma pizza"/>
-        </div>
-        <div class="card__description">
-          <p>Pizza 4 estações</p>
-          <span>por Fabiana Melo</span>
-        </div>
-      </div>
-      <div class="card" id="espaguete.png">
-        <div class="card__img">
-          <img src="/espaguete.png" alt="Imagem de um prato com espaguete"/>
-        </div>
-        <div class="card__description">
-          <p>Espaguete ao alho</p>
-          <span>por Júlia Kinoto</span>
-        </div>
-      </div>
-      <div class="card" id="lasanha.png">
-        <div class="card__img">
-          <img src="/lasanha.png" alt="Imagem de uma lasanha mac n'cheese"/>
-        </div>
-        <div class="card__description">
-          <p>Lasanha mac n'cheese</p>
-          <span>por Juliano Vieira</span>
-        </div>
-      </div>
-      <div class="card" id="doce.png">
-        <div class="card__img">
-          <img src="/doce.png" alt="Imagem de um doce pãozinho pão do céu"/>
-        </div>
-        <div class="card__description">
-          <p>Docinhos pão-do-céu</p>
-          <span>por Ricardo Golvea</span>
-        </div>
-      </div>
-      <div class="card" id="asinhas.png">
-        <div class="card__img">
-          <img src="/asinhas.png" alt="Imagem de várias asinhas de frango assado"/>
-        </div>
-        <div class="card__description">
-          <p>Asinhas de frango barbecue</p>
-          <span>por Vania Steroski</span>
-        </div>
-      </div>
-    </article>
+      {% endfor %}
+    </div>
   </main>
   <div class="modal-overlay">
     <div class="modal">
       <div class="modal-content">
         <img src="" alt="">
-        <p></p>
-        <span></span>
+          <p></p>
+          <span></span>
+        </div>
+        <span class="close-modal">Fechar modal</span>
       </div>
-      <span class="close-modal">Fechar modal</span>
     </div>
-  </div>
-{% endblock %}
+    {% block footer %}
+      <script src="/script.js"></script>
+    {% endblock %}
+  {% endblock %}

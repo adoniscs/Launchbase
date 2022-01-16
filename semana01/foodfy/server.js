@@ -1,5 +1,7 @@
 const express = require('express');
 const njk = require('nunjucks');
+const dataCard = require('./dataCard');
+const dataAbout = require('./dataAbout');
 const server = express();
 const PORT = 8000;
 
@@ -18,15 +20,15 @@ njk.configure('views', {
 // FIM
 
 server.get('/', (request, response) => {
-  return response.render('index');
+  return response.render('index', { items: dataCard });
 });
 
 server.get('/about', (request, response) => {
-  return response.render('about');
+  return response.render('about', { items: dataAbout });
 });
 
 server.get('/recipes', (request, response) => {
-  return response.render('recipes');
+  return response.render('recipes', { ìtems2: dataCard });
 });
 
 server.use((request, response) => {
