@@ -14,6 +14,7 @@
   background: var(--color-card);
   margin-bottom: 32px;
   cursor: pointer;
+  display: grid;
 }
 
 .card__image-container img {
@@ -27,6 +28,7 @@
 
 .card__info {
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
 }
 
