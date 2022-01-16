@@ -4,6 +4,7 @@ module.exports = [
     title: 'Formulário animado com JS puro e CSS Animation | Mayk Brito',
     duration: '57 min',
     price: 'Free',
+    featured: true,
   },
   {
     id: 'MkkbUfcZUZM',
@@ -16,6 +17,7 @@ module.exports = [
     title: 'Upload de arquivos: front-end com ReactJS | Diego Fernandes',
     duration: '79 min',
     price: 'Free',
+    featured: true,
   },
   {
     id: 'HN1UjzRSdBk',
@@ -29,6 +31,7 @@ module.exports = [
       'Menu de subcategorias com recursividade no JavaScript - Code/Drops #28',
     duration: '35 min',
     price: 'Free',
+    featured: true,
   },
   {
     id: 'sxPEmuW7aUg',
