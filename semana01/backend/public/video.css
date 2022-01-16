@@ -1,0 +1,17 @@
+/* VIDEO PAGE  */
+.video {
+  margin: 0 auto;
+  max-width: 880px;
+}
+
+.card__video-container {
+  position: relative;
+  padding-top: 62.5%;
+}
+
+.card__video-container iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}

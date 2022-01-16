@@ -41,6 +41,22 @@ server.get('/portfolio', (request, response) => {
   return response.render('portfolio', { items: videos }); // enviando os dados do back p/ o front
 });
 
+server.get('/video', (request, response) => {
+  const id = request.query.id;
+
+  const video = videos.find(function (video) {
+    if (video.id == id) {
+      return true;
+    }
+  });
+
+  if (!video) {
+    return response.send('Video not found!!!');
+  }
+
+  return response.render('video', { item: video });
+});
+
 server.listen(PORT, () => {
   console.log('Server is running...');
 });
