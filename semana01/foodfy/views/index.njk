@@ -1,0 +1,76 @@
+{% extends "layout.njk" %}
+{% block content %}
+  <main>
+    <section class="wrapper">
+      <div class="wrapper__info">
+        <h1>As melhores receitas</h1>
+        <p>
+          Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo
+          inteiro.
+        </p>
+      </div>
+      <div class="wrapper__img">
+        <img src="/chef.png" alt="Imagem de um chef de cozinha"/>
+      </div>
+    </section>
+    <article>
+      <h2>Mais acessados</h2>
+      <div class="cards">
+        <div class="card">
+          <div class="card__img">
+            <img src="/burger.png" alt="Imagem de um hamburguer"/>
+          </div>
+          <div class="card__description">
+            <p>Triplo bacon burguer</p>
+            <span>por Jorge Relato</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/pizza.png" alt="Imagem de uma pizza"/>
+          </div>
+          <div class="card__description">
+            <p>Pizza 4 estações</p>
+            <span>por Fabiana Melo</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/espaguete.png" alt="Imagem de um prato com espaguete"/>
+          </div>
+          <div class="card__description">
+            <p>Espaguete ao alho</p>
+            <span>por Júlia Kinoto</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/lasanha.png" alt="Imagem de uma lasanha mac n'cheese"/>
+          </div>
+          <div class="card__description">
+            <p>Lasanha mac n'cheese</p>
+            <span>por Juliano Vieira</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/doce.png" alt="Imagem de um doce pãozinho pão do céu"/>
+          </div>
+          <div class="card__description">
+            <p>Docinhos pão-do-céu</p>
+            <span>por Ricardo Golvea</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/asinhas.png" alt="Imagem de várias asinhas de frango assado"/>
+          </div>
+          <div class="card__description">
+            <p>Asinhas de frango barbecue</p>
+            <span>por Vania Steroski</span>
+          </div>
+        </div>
+      </div>
+    </article>
+  </main>
+{% endblock %}
