@@ -1,19 +1,18 @@
 {% extends "layout.njk" %}
 {% block content %}
   <section>
-    <h1>Desafio frontend Launchbase - Rocketseat</h1>
+    <h1>
+      {{ items.title }}
+    </h1>
     <blockquote cite="https://www.rocketseat.com.br/sobre#boost">
       <p>
-        Criamos um ambiente dedicado para que programadores e programadoras possam se conectar com as oportunidades, estudar e
-        crescer na carreira através de uma jornada de aprendizado completa e contínua.
+        {{ items.description }}
       </p>
     </blockquote>
     <ul>
-      <li>Javascript</li>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>ReactJs</li>
-      <li>NodeJs</li>
+      {% for item in items.techs %}
+        <li>{{ item.name }}</li>
+      {% endfor %}
     </ul>
   </section>
-{% endblock  %}
+{% endblock %}

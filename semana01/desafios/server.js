@@ -1,6 +1,7 @@
 const express = require('express');
-const res = require('express/lib/response');
 const njk = require('nunjucks');
+const dataCard = require('./data_card');
+const dataAbout = require('./data_about');
 const server = express();
 const PORT = 3333;
 
@@ -14,11 +15,15 @@ njk.configure('views', {
 });
 
 server.get('/', (request, response) => {
-  return response.render('courses');
+  return response.render('courses', { items: dataCard });
 });
 
 server.get('/about', (request, response) => {
-  return response.render('about');
+  return response.render('about', { items: dataAbout });
+});
+
+server.get('/course', (request, response) => {
+  return response.render('course');
 });
 
 server.use(function (request, response) {
