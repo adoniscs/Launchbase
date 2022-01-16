@@ -1,7 +1,6 @@
 {% extends "layout.njk" %}
 {% block head %}
   <title>Portfolio | Adonis Cipriano</title>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
   <link rel="stylesheet" href="/cards.css"/>
   <link rel="stylesheet" href="/modal-overlay.css"/>
   <link rel="stylesheet" href="/iframe.css"/>
@@ -29,15 +28,5 @@
       </div>
     {% endfor %}
   </section>
-  <!-- INIT MODAL -->
-  <div class="modal-overlay">
-    <div class="modal">
-      <a class="close-modal">
-        <i class="material-icons">close</i>
-      </a>
-      <div class="modal-content"></div>
-    </div>
-  </div>
-  <!-- FINISH MODAL  -->
   <script src="/script.js"></script>
 {% endblock %}
