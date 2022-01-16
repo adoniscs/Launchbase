@@ -8,18 +8,6 @@ for (let $card of $cards) {
   $card.addEventListener('click', function () {
     const postId = $card.getAttribute('id');
 
-    $modalOverlay.classList.add('active');
-    $modalOverlay.querySelector(
-      'iframe'
-    ).src = `https://blog.rocketseat.com.br/${postId}`;
+    window.location.href = `/course/${postId}`;
   });
 }
-
-$buttonCloseModal.addEventListener('click', function () {
-  $modalOverlay.classList.remove('active');
-  $modal.classList.remove('maximize');
-});
-
-$buttonOpenFullModal.addEventListener('click', function () {
-  $modal.classList.add('maximize');
-});

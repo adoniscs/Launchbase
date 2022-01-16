@@ -12,6 +12,7 @@ server.use(express.static('public'));
 server.set('view engine', 'njk');
 njk.configure('views', {
   express: server,
+  noCache: true,
 });
 
 server.get('/', (request, response) => {
@@ -22,8 +23,21 @@ server.get('/about', (request, response) => {
   return response.render('about', { items: dataAbout });
 });
 
-server.get('/course', (request, response) => {
-  return response.render('course');
+server.get('/course/:id', (request, response) => {
+  const id = request.params.id;
+
+  const article = dataCard.find(function (article) {
+    return article.id == id;
+  });
+
+  if (!article) {
+    return response.send(`
+      Article not found!!! <br />
+      <a href='/'>Go to home</a>  
+    `);
+  }
+
+  return response.render('course', { item: article });
 });
 
 server.use(function (request, response) {

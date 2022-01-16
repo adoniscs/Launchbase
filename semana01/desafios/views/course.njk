@@ -1,40 +1,8 @@
 {% extends "layout.njk" %}
-{% block head %}
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-{% endblock %}
 {% block content %}
-  <section>
-    <h1>Desafio frontend Launchbase - Rocketseat</h1>
-    <h3>Posts do Blog da Rocketseat</h3>
-  </section>
-  <section class="cards">
-    {% for item in items %}
-      <div class="card" id="{{ item.id }}">
-        <div class="card__image-content">
-          <img src="{{ item.image }}" alt="{{ item.description }}"/>
-        </div>
-        <div class="card__content">
-          <p>{{ item.description }}</p>
-        </div>
-        <div class="card__info">
-          <p>{{ item.name }}</p>
-          <p>{{ item.duration }}</p>
-        </div>
-      </div>
-    {% endfor %}r
-  </section>
-  <div class="modal-overlay">
-    <div class="modal">
-      <a class="maximize">
-        <i class="material-icons">open_in_full</i>
-      </a>
-      <a class="close-modal">
-        <i class="material-icons">close</i>
-      </a>
-      <div class="modal-content">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
+  <section class="article" id="{{ item.id }}">
+    <div class="article__img-content">
+      <iframe src="https://blog.rocketseat.com.br/{{ item.id }}" frameborder="0"></iframe>
     </div>
-  </div>
-  <script src="/scripts.js"></script>
+  </section>
 {% endblock %}

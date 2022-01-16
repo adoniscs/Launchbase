@@ -172,3 +172,21 @@ section p {
 .not-found a:hover {
   background: rgba(0, 0, 0, 0.5);
 }
+
+.article {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.article__img-content {
+  position: relative;
+  padding-top: 45.5%;
+}
+
+.article__img-content iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
