@@ -30,17 +30,7 @@
       {% endfor %}
     </div>
   </main>
-  <div class="modal-overlay">
-    <div class="modal">
-      <div class="modal-content">
-        <img src="" alt="">
-          <p></p>
-          <span></span>
-        </div>
-        <span class="close-modal">Fechar modal</span>
-      </div>
-    </div>
-    {% block footer %}
-      <script src="/script.js"></script>
-    {% endblock %}
+  {% block footer %}
+    <script src="/script.js"></script>
   {% endblock %}
+{% endblock %}

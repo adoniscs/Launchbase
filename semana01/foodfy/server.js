@@ -1,5 +1,6 @@
 const express = require('express');
 const njk = require('nunjucks');
+const data = require('./data');
 const dataCard = require('./dataCard');
 const dataAbout = require('./dataAbout');
 const server = express();
@@ -27,7 +28,10 @@ server.get('/about', (request, response) => {
   return response.render('about', { items: dataAbout });
 });
 
-server.get('/recipes', (request, response) => {
+server.get('/recipes/:id', (request, response) => {
+  const id = request.params.id;
+
+  console.log(id);
   return response.render('recipes', { ìtems2: dataCard });
 });
 
