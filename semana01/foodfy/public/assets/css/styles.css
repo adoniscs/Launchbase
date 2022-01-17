@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
   font: 16px 'Roboto', sans-serif;
   color: var(--color-black);
@@ -7,7 +9,7 @@ main,
 .menu {
   max-width: 940px;
   width: 90%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .menu {
