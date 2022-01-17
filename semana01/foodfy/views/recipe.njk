@@ -7,7 +7,7 @@
       <div class="recipe">
         <div class="recipe__wrapper">
           <div class="recipe__wrapper-img">
-            <img src="{{ data.image2 }}" alt="Imagem de {{ data.title }}"/>
+            <img src="{{ data.image }}" alt="Imagem de {{ data.title }}"/>
           </div>
           <div class="recipe__wrapper-description">
             <h1 class="recipe__wrapper-title">
@@ -21,7 +21,7 @@
         <div class="recipe__ingredients">
           <h3 class="recipe__ingredients-title">
             Ingredientes
-            <span>esconder</span>
+            <span id="btnIngredients">esconder</span>
           </h3>
           <div class="recipe__ingredients-items">
             <ul>
@@ -34,7 +34,7 @@
         <div class="recipe__preparation">
           <h3 class="recipe__preparation-title">
             Modo de preparo
-            <span>esconder</span>
+            <span id="btnPreparation">esconder</span>
           </h3>
           <div class="recipe__preparation-items">
             <ul>
@@ -47,7 +47,7 @@
         <div class="recipe__information">
           <h3 class="recipe__information-title">
             Informações adicionais
-            <span>esconder</span>
+            <span id="btnInformation">esconder</span>
           </h3>
           <div class="recipe__information-more">
             <p class="recipe__information-paragraph">
@@ -57,4 +57,7 @@
         </div>
       </div>
     </main>
+    {% block footer %}
+      <script src="/script.js"></script>
+    {% endblock %}
   {% endblock %}

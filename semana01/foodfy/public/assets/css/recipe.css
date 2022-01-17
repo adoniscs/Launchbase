@@ -73,3 +73,15 @@ ul li {
   font-size: 18px;
   line-height: 28px;
 }
+
+.recipe__ingredients-items.hiden {
+  display: none;
+}
+
+.recipe__preparation-items.hiden {
+  display: none;
+}
+
+.recipe__information-paragraph.hiden {
+  display: none;
+}
