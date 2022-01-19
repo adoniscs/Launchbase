@@ -127,3 +127,34 @@ header {
   font-size: 12px;
   text-transform: uppercase;
 }
+
+/* FORMULÁRIO  */
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* corrigir input radio quando for de 100% */
+input[type='radio'] {
+  width: initial;
+  margin-left: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type='submit'] {
+  padding: 8px 32px;
+  background: #facc15;
+  color: #555;
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
