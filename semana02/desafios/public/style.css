@@ -63,3 +63,78 @@ header {
   width: 100%;
   transition: width 0.2s linear;
 }
+
+/* card teachers */
+.card__container {
+  max-width: 800px;
+  width: 90%;
+  min-height: 400px;
+  background: #f5f5f5;
+  margin: 48px auto 40px;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 40% 60%;
+
+  animation: up 0.3s linear;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card__avatar {
+  background: no-repeat
+    url('https://source.unsplash.com/collection/10085420/500x500') center center /
+    cover;
+}
+
+.card__details {
+  padding: 32px;
+}
+
+.card__details-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.card__details-item:last-child {
+  border-bottom: none;
+}
+
+.card__details-item h3,
+.card__details-item div:nth-child(1) {
+  color: #999;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.card__details h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6c60d6;
+}
+
+.card__details-item div:nth-child(2) {
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card__details-item span {
+  background: var(--color-purple);
+  color: var(--color-light-blue);
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 12px;
+  margin-top: 8px;
+  display: inline-block;
+  text-transform: uppercase;
+}
