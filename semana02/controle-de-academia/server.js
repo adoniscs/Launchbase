@@ -4,6 +4,8 @@ const routes = require('./routes');
 const server = express();
 const PORT = 3333;
 
+// responsável por fazer funcionar o req.body
+server.use(express.urlencoded({ extended: true })); // middleware 
 // user arquivos estáticos (img, css)
 server.use(express.static('public')); // middleware
 server.use(routes); // middleware
