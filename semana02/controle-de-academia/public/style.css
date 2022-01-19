@@ -14,7 +14,7 @@ body {
 
 header {
   width: 100%;
-  padding: 32px;
+  padding: 30px;
   text-align: center;
   background: #facc15;
 }
@@ -60,9 +60,9 @@ header {
 .card {
   max-width: 800px;
   width: 90%;
-  height: 400px;
+  min-height: 400px;
   background: #fff;
-  margin: 46px auto;
+  margin: 46px auto 38px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
@@ -79,4 +79,51 @@ header {
   to {
     opacity: 1;
   }
+}
+
+/* details */
+.details {
+  padding: 32px;
+}
+
+.details .item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child {
+  border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+  color: #777;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.details h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #a16207;
+}
+
+.details .item span {
+  padding: 8px 16px;
+  background: #facc15;
+  border-radius: 16px;
+  color: #777;
+  margin-right: 8px;
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
 }

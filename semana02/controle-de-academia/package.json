@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy http://localhost:3000 --files 'public,views'"
+    "browsersync": "browser-sync start --proxy http://localhost:3333 --files 'public,views'"
   },
   "keywords": [],
   "author": "",

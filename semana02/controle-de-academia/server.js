@@ -2,7 +2,7 @@ const express = require('express');
 const nunjucks = require('nunjucks');
 const routes = require('./routes');
 const server = express();
-const PORT = 3000;
+const PORT = 3333;
 
 // user arquivos estáticos (img, css)
 server.use(express.static('public')); // middleware
