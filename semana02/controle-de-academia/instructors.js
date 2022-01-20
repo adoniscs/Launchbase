@@ -14,14 +14,28 @@ exports.post = (req, res) => {
     }
   }
 
+  // desestruturando os dados enviado pelo formulario
+  let { avatar_url, birth, name, services, gender } = req.body
+
   // transformando a data de nascimento em milesegundos
-  req.body.birth = Date.parse(req.body.birth);
+  birth = Date.parse(birth);
 
   // criando a data de criação do instrutor em milesegundos
-  req.body.created_at = Date.now();
+  const created_at = Date.now();
+
+  // criando um ID para um instrutor criado
+  const id = Number(data.instructos.length + 1);
 
   // adicionando instrutores no arquivo data.json
-  data.instructos.push(req.body); // {[...], [...]}
+  data.instructos.push({
+    id,
+    avatar_url,
+    name,
+    birth,
+    gender,
+    services,
+    created_at,
+  }); // {[...], [...]}
 
   // funcão que irá escrever os dados passados pelo frontend
   // e escreverá no arquivo data.json
