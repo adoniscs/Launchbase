@@ -14,6 +14,12 @@ exports.post = (req, res) => {
     }
   }
 
+  // transformando a data de nascimento em milesegundos
+  req.body.birth = Date.parse(req.body.birth);
+
+  // criando a data de criação do instrutor em milesegundos
+  req.body.created_at = Date.now();
+
   // adicionando instrutores no arquivo data.json
   data.instructos.push(req.body); // {[...], [...]}
 
