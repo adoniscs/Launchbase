@@ -114,6 +114,7 @@ header {
   line-height: 24px;
   letter-spacing: 0.7px;
   font-weight: normal;
+  margin-bottom: 4px;
 }
 
 .card__details h3 {
@@ -137,4 +138,42 @@ header {
   margin-top: 8px;
   display: inline-block;
   text-transform: uppercase;
+}
+
+/* FORMULÁRIO PARA ADICIONAR NOVO PROFESSOR */
+input,
+select {
+  width: 100%;
+  background: none;
+  outline: none;
+  color: #666;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+input::placeholder,
+option {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input[type="option"] {
+  background: none;
+}
+
+button[type="submit"] {
+  background: var(--color-purple);
+  border-radius: 8px;
+  color: var(--color-light-blue);
+  margin-top: 16px;
+  padding: 16px 32px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
 }
