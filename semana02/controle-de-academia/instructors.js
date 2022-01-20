@@ -1,4 +1,6 @@
 const fs = require('fs');
+const data = require('./data.json');
+
 // create
 exports.post = (req, res) => {
   // tornar o preenchimento dos campos do form
@@ -12,9 +14,12 @@ exports.post = (req, res) => {
     }
   }
 
+  // adicionando instrutores no arquivo data.json
+  data.instructos.push(req.body); // {[...], [...]}
+
   // funcão que irá escrever os dados passados pelo frontend
   // e escreverá no arquivo data.json
-  fs.writeFile('data.json', JSON.stringify(req.body), function (error) {
+  fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
     if (error) {
       return res.send('Write file error!');
     }
